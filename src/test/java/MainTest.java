@@ -73,7 +73,7 @@ public class MainTest {
         PrintStream saveOut = System.out;
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        assertEquals(car.startEngine(), "the car's engine is starting");
+        assertEquals(car.startEngine(), "the car's engine is starting.");
         assertThat(out.toString(), containsString(car.getClass().getSimpleName()));
     }
 
@@ -83,7 +83,7 @@ public class MainTest {
         PrintStream saveOut = System.out;
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        assertEquals(car.accelerate(), "the car is accelerating");
+        assertEquals(car.accelerate(), "the car is accelerating.");
         assertThat(out.toString(), containsString(car.getClass().getSimpleName()));
     }
 
@@ -93,7 +93,7 @@ public class MainTest {
         PrintStream saveOut = System.out;
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        assertEquals(car.brake(), "the car is braking");
+        assertEquals(car.brake(), "the car is braking.");
         assertThat(out.toString(), containsString(car.getClass().getSimpleName()));
     }
 
@@ -136,7 +136,7 @@ public class MainTest {
     public void testGasPoweredCar() throws NoSuchMethodException {
         assertThat(gasPoweredCar.getName(), instanceOf(String.class));
         assertThat(gasPoweredCar.getDescription(), instanceOf(String.class));
-        assertThat(gasPoweredCar.getAverageKmPerLiter(), instanceOf(Double.class));
+        assertThat(gasPoweredCar.getAverageKmPerLitre(), instanceOf(Double.class));
         assertThat(gasPoweredCar.getCylinders(), instanceOf(Integer.class));
     }
 
@@ -146,7 +146,7 @@ public class MainTest {
         assertThat(hybridCar.getName(), instanceOf(String.class));
         assertThat(hybridCar.getDescription(), instanceOf(String.class));
         assertThat(hybridCar.getCylinders(), instanceOf(Integer.class));
-        assertThat(hybridCar.getAvgKmPerLiter(), instanceOf(Double.class));
+        assertThat(hybridCar.getAvgKmPerLitre(), instanceOf(Double.class));
         assertThat(hybridCar.getBatterySize(), instanceOf(Integer.class));
     }
 
